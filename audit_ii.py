@@ -4,8 +4,6 @@ from django.utils.translation import ugettext_lazy as _
 
 from common.models import IndexedTimeStampedModel
 
-from .managers import UserManager
-
 
 class User(AbstractBaseUser, PermissionsMixin, IndexedTimeStampedModel):
     email = models.EmailField(max_length=255, unique=True)
